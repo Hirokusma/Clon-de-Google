@@ -1,0 +1,247 @@
+html, body{
+    height: 100%;
+    margin: 0;
+}
+body{
+    /*Tenemos que quitar los margenes siempre que iniciamos un proyecto*/
+    margin: 0;
+    /*es un margen pero hacia dentro del elemento*/
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    background-image: url(/fondos/descargar.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;   
+    display: flex;
+    flex-direction: column;
+   
+}
+
+
+/* NAVEGACIÓN*********************/
+header{
+    
+    /*es diferente poner % a px este segundo es más como una imagen mientras que ell primero es el porcentaje de la pagina que usa*/
+    width: 100%;
+    height: 60px;
+}
+
+/*Acceder a nav a través de header*/
+header nav{
+    display: flex;
+    /*manda las cosas al final del documento o a la derecha*/
+    justify-content: flex-end;
+}
+
+header nav .nav-right-section{
+    /*background-color: blueviolet;*/
+    width: 250px;
+    height: auto; /*se ajusta de manera automática*/
+    
+    /*eliminar puntitos*/
+    list-style: none;
+    display: flex;
+    /*justifica al centro respecto al elemento*/
+    justify-content: center;
+    /*Centrando verticalmente*/
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+/*Anclas dentro del nav para agregar espacio*/
+nav .nav-right-section a{
+    color: rgba(255, 255, 255, 0.87);
+    margin-right: 20px;
+}
+
+nav .nav-right-section .menu {
+    background-image: url(/fondos/icons8-circled-menu-24.png);
+    width: 25px;
+    height: 25px;
+    /*este me permite que no importa el tamaño del contenido, siempre estará en un nuestro elemento*/
+    background-size: contain;
+    /*margin-right: 20px;*/
+}
+
+/* Imagen del usuarix */
+nav .nav-right-section img{
+    /* Redondeado de bordes */
+    border-radius: 100%;
+    width: 35px;
+    margin-left: 20px
+}
+/*************************************************
+****************************************************
+*************************************************/
+/* Main */
+.main-content{
+    flex: 1;
+
+}
+
+main {
+    margin-top: 150px;
+    /* Centrar elementos */
+    text-align: center;
+}
+
+main .main-logo{
+    width: 530px;
+    margin-bottom: 40px;
+    /* Vertical // Horizontal */
+    /* Centrado absoluto gracias a los márgnes automáticos */
+    margin: 0 auto 40px;
+}
+
+main .main-logo img {
+    height: 120px;
+}
+
+main .main-input {
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+}
+
+main .main-input-container {
+    width: 525px;
+    border: 1px solid #d9dbdf;
+    border-radius: 20px;
+}
+
+main .main-input input {
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 35px;
+    border: none;
+    /* outline - quitar contorno al accionar click */
+    outline: none;
+    width: 450px;
+}
+/* Efecto hover (sombra) al poner el mouse sin accionar */
+main .main-input-container:hover {
+    border-color: #dfe1e500;
+    /*  0 -> desplazamiento horizontal //
+        1px -> desplazamiento vertical //
+        6px -> desenfoque //
+        0 -> expansión de la sombra    */
+    box-shadow: 0 1px 6px 0 #20212447;
+}
+
+main .main-input .search-icon {
+    
+    background-image: url(https://seekicon.com/free-icon-download/search_20.svg);
+    background-size: contain;
+    background-position: center;
+    /* Propiedad para que no se repita */
+    background-repeat: no-repeat;
+    width: 15px;
+    height: 15px;
+    padding-left: 10px;
+    margin-right: 5px;
+}
+
+main .main-input .micro-icon{
+    background-image: url(https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/726px-Google_mic.svg.png);
+    width: 14px;
+    height: 14px;
+    padding-left: 10px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+main .main-input .cam-icon {
+    background-image: url(https://static.wikia.nocookie.net/logopedia/images/2/2b/Google_Lens_2021.svg);
+    width: 16px;
+    height: 16px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    padding-right: 6%;
+}
+
+main .main-buttons {
+    width: 530px;
+    margin: 0 auto;
+}
+main .main-buttons div {
+    /* inline // inline block los pone en una sola linea */
+    display: inline-block;
+}
+main .main-buttons button {
+    border:0;
+    height: 36px;
+    background-color: #f8f9fa;
+    font-size: 14px;
+    color: #3c4043;
+    border-radius: 4px;
+    padding: 0 15px;
+    margin-right: 15px;
+    border: 1px solid #f8f9fa;
+}
+
+main .main-buttons button:hover{
+    box-shadow: 0 1px 1px 0 #20212447;
+    border: 1px solid #dadce0;
+    color:#202124;
+}
+
+/*************************************************
+****************************************************
+*************************************************/
+/* FOOTER */
+.footer-content {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    height: 80px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    align-items: flex-end;
+}
+
+.footer-section {
+    padding: 0 20px;
+}
+
+.footer-section .mexico-section h4 {
+    border-bottom: 2px solid #666161b0;
+    padding-bottom: 5px;
+}
+
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-start;
+    }
+
+
+.footer-section ul li {
+    justify-content: center;
+    height: auto;
+    align-items: center;
+    margin-right: 15px;
+}
+
+
+.footer-section a {
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.footer-section a:hover {
+    color: #555;
+}
+
+
+.footer-section .second-section ul {
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
